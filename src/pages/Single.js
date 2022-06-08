@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Single() {
   return (
@@ -35,9 +36,9 @@ function Single() {
                 Tenetur ut aliquid dolore a nobis sapiente sunt minus eum
                 perspiciatis suscipit?
               </p>
-              <a class="button" href="">
+              <Link class="button" to="#">
                 Add to cart
-              </a>
+              </Link>
             </div>
           </div>
         </article>

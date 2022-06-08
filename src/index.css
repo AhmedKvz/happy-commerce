@@ -118,12 +118,12 @@ about
 }
 
 /************************
-about
+discoverOff
 *************************/
 
 .discoverOff {
   background-image: url(img/shop.jpg);
-  height: 60vh;
+  height: 60vw;
   background-position: center;
   background-size: cover;
 }

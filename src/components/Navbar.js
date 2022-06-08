@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 import Logo from "../img/logo.png";
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg bg-white">
+    <nav className="navbar navbar-light navbar-expand-lg bg-light">
       <div className="container">
         <img className="navbar-brand logo" src={Logo} alt="" />
 
         <button
-          className="navbar-toggler"
+          className="navbar-toggler dark"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"

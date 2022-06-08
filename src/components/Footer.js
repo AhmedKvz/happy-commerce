@@ -15,24 +15,24 @@ function Footer() {
           </div>
           <div className="col-md-3 col-sm-6">
             <h4>Top products</h4>
-            <ul className="list-unstyled">
-              <li>
-                <Link to={"#"}>Jeans</Link>
-              </li>
-              <li>
-                <Link to={"#"}>Bags</Link>
-              </li>
-              <li>
-                <Link to={"#"}>Acessories</Link>
-              </li>
-              <li>
-                <Link to={"#"}>Phones</Link>
-              </li>
+            <ul className="flex-column list-unstyled">
+              <Link to={"#"}>
+                <li>Jeans</li>
+              </Link>
+              <Link to={"#"}>
+                <li>Bags</li>
+              </Link>
+              <Link to={"#"}>
+                <li>Accessories</li>
+              </Link>
+              <Link to={"#"}>
+                <li>Phones</li>
+              </Link>
             </ul>
           </div>
           <div className="col-md-3 col-sm-6">
             <h4>Quick links</h4>
-            <ul className="list-unstyled">
+            <ul className="flex-column list-unstyled">
               <li>
                 <Link to={"/Home"}>Home</Link>
               </li>

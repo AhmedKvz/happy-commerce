@@ -99,35 +99,30 @@ function Home() {
       <section className="products py-5">
         <article className="container">
           <div className="row">
-            {images &&
-              images.map((image, index) => {
-                return (
-                  <div className="col-md-4 col-sm-6" key={index}>
-                    <div className="card">
-                      <div className="holder">
-                        <img
-                          src={image.src}
-                          className="card-img-top"
-                          alt="..."
-                        />
+            {images.map((image, index) => {
+              return (
+                <div className="col-md-4 col-sm-6" key={index}>
+                  <div className="card">
+                    <div className="holder">
+                      <img src={image.src} className="card-img-top" alt="..." />
+                    </div>
+                    <div className="card-body">
+                      <div className="price d-flex justify-content-between">
+                        <h5 className="card-title">{image.txt}</h5>
+                        <h5>{image.price}</h5>
                       </div>
-                      <div className="card-body">
-                        <div className="price d-flex justify-content-between">
-                          <h5 className="card-title">Orange t-shirt</h5>
-                          <h5>55$</h5>
-                        </div>
-                        <p className="card-text">
-                          Some quick example text to build on the card title and
-                          make up the bulk of the card's content.
-                        </p>
-                        <a href="single.html" className="button">
-                          Shop now
-                        </a>
-                      </div>
+                      <p className="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="single.html" className="button">
+                        Shop now
+                      </a>
                     </div>
                   </div>
-                );
-              })}
+                </div>
+              );
+            })}
           </div>
         </article>
       </section>
