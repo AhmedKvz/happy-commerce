@@ -1,7 +1,7 @@
 import React from "react";
 import Slide1 from "../img/slide_1.jpg";
 import Slide2 from "../img/slide_2.jpg";
-
+import images from "../img/images.js";
 function Home() {
   return (
     <>
@@ -43,9 +43,9 @@ function Home() {
                 Lorem ipsum dolor sit, amet <br />
                 consectetur adipisicing elit. Voluptatibus, impedit?
               </p>
-              <a href="" className="button">
+              <button href="" className="button">
                 View collection
-              </a>
+              </button>
             </div>
           </div>
           <div className="carousel-item">
@@ -64,9 +64,9 @@ function Home() {
                 Lorem ipsum dolor sit, amet <br />
                 consectetur adipisicing elit. Voluptatibus, impedit?
               </p>
-              <a href="" className="button">
+              <button href="" className="button">
                 View collection
-              </a>
+              </button>
             </div>
           </div>
         </div>
@@ -99,150 +99,35 @@ function Home() {
       <section className="products py-5">
         <article className="container">
           <div className="row">
-            <div className="col-md-4 col-sm-6">
-              <div className="card">
-                <div className="holder">
-                  <img
-                    src="img/product1.jpg"
-                    className="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div className="card-body">
-                  <div className="price d-flex justify-content-between">
-                    <h5 className="card-title">Orange t-shirt</h5>
-                    <h5>55$</h5>
+            {images &&
+              images.map((image, index) => {
+                return (
+                  <div className="col-md-4 col-sm-6" key={index}>
+                    <div className="card">
+                      <div className="holder">
+                        <img
+                          src={image.src}
+                          className="card-img-top"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="card-body">
+                        <div className="price d-flex justify-content-between">
+                          <h5 className="card-title">Orange t-shirt</h5>
+                          <h5>55$</h5>
+                        </div>
+                        <p className="card-text">
+                          Some quick example text to build on the card title and
+                          make up the bulk of the card's content.
+                        </p>
+                        <a href="single.html" className="button">
+                          Shop now
+                        </a>
+                      </div>
+                    </div>
                   </div>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="single.html" className="button">
-                    Shop now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6 mb-4">
-              <div className="card">
-                <div className="holder">
-                  <img
-                    src="img/product2.jpg"
-                    className="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div className="card-body">
-                  <div className="price d-flex justify-content-between">
-                    <h5 className="card-title">Traveller Bag</h5>
-                    <h5>55$</h5>
-                  </div>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="single.html" className="button">
-                    Shop now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6">
-              <div className="card">
-                <div className="holder">
-                  <img
-                    src="img/product3.jpg"
-                    className="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div className="card-body">
-                  <div className="price d-flex justify-content-between">
-                    <h5 className="card-title">Sunglasses</h5>
-                    <h5>55$</h5>
-                  </div>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="single.html" className="button">
-                    Shop now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6">
-              <div className="card">
-                <div className="holder">
-                  <img
-                    src="img/product4.jpg"
-                    className="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div className="card-body">
-                  <div className="price d-flex justify-content-between">
-                    <h5 className="card-title">Woman watch</h5>
-                    <h5>55$</h5>
-                  </div>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="single.html" className="button">
-                    Shop now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6">
-              <div className="card">
-                <div className="holder">
-                  <img
-                    src="img/product5.jpg"
-                    className="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div className="card-body">
-                  <div className="price d-flex justify-content-between">
-                    <h5 className="card-title">Summer hat</h5>
-                    <h5>55$</h5>
-                  </div>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="single.html" className="button">
-                    Shop now
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-md-4 col-sm-6">
-              <div className="card">
-                <div className="holder">
-                  <img
-                    src="img/product6.jpg"
-                    className="card-img-top"
-                    alt="..."
-                  />
-                </div>
-                <div className="card-body">
-                  <div className="price d-flex justify-content-between">
-                    <h5 className="card-title">Roller skates</h5>
-                    <h5>55$</h5>
-                  </div>
-                  <p className="card-text">
-                    Some quick example text to build on the card title and make
-                    up the bulk of the card's content.
-                  </p>
-                  <a href="single.html" className="button">
-                    Shop now
-                  </a>
-                </div>
-              </div>
-            </div>
+                );
+              })}
           </div>
         </article>
       </section>
@@ -287,9 +172,9 @@ function Home() {
         <article className="container text-end">
           <p className="lead">Women collection</p>
           <h2 className="display-2 fw-bold">50% OFF</h2>
-          <a href="" className="button mb-4">
+          <button href="" className="button mb-4">
             Discover now
-          </a>
+          </button>
           <p>Limited time offer</p>
         </article>
       </section>
