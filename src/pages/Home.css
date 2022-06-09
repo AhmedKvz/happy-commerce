@@ -1,0 +1,64 @@
+/************************
+slider
+*************************/
+
+.carousel-caption {
+  bottom: 3rem;
+}
+
+.carousel-item h2 {
+  line-height: 1;
+}
+
+.carousel-item h2 span {
+  color: var(--accents);
+}
+
+/************************
+  slider
+  *************************/
+
+.products h5:last-child {
+  color: var(--accents);
+}
+
+.holder {
+  overflow: hidden;
+}
+
+.products img {
+  transition: var(--transition);
+}
+
+.products img:hover {
+  transform: scale(1.1) rotate(1deg);
+}
+
+/************************
+  about
+  *************************/
+.about i {
+  color: var(--accents);
+  text-shadow: 0 0 1px var(--text);
+  font-size: 2rem;
+}
+
+.about .border-dark {
+  transition: var(--transition);
+}
+
+.about .border-dark:hover {
+  background: var(--text);
+  color: var(--white);
+}
+
+/************************
+  discoverOff
+  *************************/
+
+.discoverOff {
+  background-image: url(../img/shop.jpg);
+  height: 60vw;
+  background-position: center;
+  background-size: cover;
+}

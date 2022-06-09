@@ -1,32 +1,45 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
+import { useState } from "react";
+import Images from "../img/images";
 
 function Single() {
+  const [items, setItems] = useState({ ...Images });
+  let params = useParams();
+
+  let options = [];
+  for (let i = 0; i < items[params?.id].quant; i++) {
+    options.push(
+      <option key={i} value={i}>
+        {i}
+      </option>
+    );
+  }
   return (
     <>
       {/* <!-- single --> */}
-      <section class="single py-5">
-        <article class="container">
-          <div class="row">
-            <div class="col-md-6">
+      <section className="single py-5">
+        <article className="container">
+          <div className="row">
+            <div className="col-md-6">
               <img
-                src="img/product1.jpg"
+                src={`../` + items[params?.id].src}
                 alt=""
-                class="img-fluid border shadow-lg"
+                className="img-fluid border shadow-lg"
               />
             </div>
-            <div class="col-md-6">
-              <div class="price d-flex justify-content-between">
-                <h5>Sunglasses</h5>
-                <h5>100$</h5>
+            <div className="col-md-6">
+              <div className="price d-flex justify-content-between">
+                <h5>{items[params?.id].txt}</h5>
+                <h5>{items[params?.id].price}</h5>
               </div>
-              <select class="form-select" aria-label="Default select example">
-                <option selected>Quantity</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
+              <select
+                className="form-select"
+                aria-label="Default select example"
+              >
+                {options}
               </select>
-              <p class="py-5">
+              <p className="py-5">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                 <br />
                 Tenetur ut aliquid dolore a nobis sapiente sunt minus eum
@@ -36,7 +49,7 @@ function Single() {
                 Tenetur ut aliquid dolore a nobis sapiente sunt minus eum
                 perspiciatis suscipit?
               </p>
-              <Link class="button" to="#">
+              <Link className="button" to="#">
                 Add to cart
               </Link>
             </div>

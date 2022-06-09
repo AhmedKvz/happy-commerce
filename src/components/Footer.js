@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import Logo from "../img/logo.png";
 function Footer() {
   return (
     <footer className="py-5 bg-dark text-white">
@@ -51,7 +51,7 @@ function Footer() {
             <Link to={"/"}>
               <img
                 className="img-fluid rounded shadow-lg border border-white"
-                src="img/logo.png"
+                src={Logo}
                 alt=""
               />
             </Link>

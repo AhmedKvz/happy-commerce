@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Slide1 from "../img/slide_1.jpg";
 import Slide2 from "../img/slide_2.jpg";
 import images from "../img/images.js";
+import "./Home.css";
 function Home() {
   return (
     <>
@@ -104,7 +106,13 @@ function Home() {
                 <div className="col-md-4 col-sm-6" key={index}>
                   <div className="card">
                     <div className="holder">
-                      <img src={image.src} className="card-img-top" alt="..." />
+                      <Link to={`/single/${index}`}>
+                        <img
+                          src={image.src}
+                          className="card-img-top"
+                          alt="..."
+                        />
+                      </Link>
                     </div>
                     <div className="card-body">
                       <div className="price d-flex justify-content-between">
@@ -115,9 +123,9 @@ function Home() {
                         Some quick example text to build on the card title and
                         make up the bulk of the card's content.
                       </p>
-                      <a href="single.html" className="button">
+                      <Link to={`/single/${index}`} className="button">
                         Shop now
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

@@ -5,8 +5,10 @@ function Navbar() {
   return (
     <nav className="navbar navbar-light navbar-expand-lg bg-light">
       <div className="container">
-        <img className="navbar-brand logo" src={Logo} alt="" />
-
+        <Link to={"/"}>
+          {" "}
+          <img className="navbar-brand logo" src={Logo} alt="" />
+        </Link>
         <button
           className="navbar-toggler dark"
           type="button"
