@@ -62,3 +62,13 @@ slider
   background-position: center;
   background-size: cover;
 }
+
+/************************
+responsive
+*************************/
+
+@media (max-width: 768px) {
+  .products .col-md-4 {
+    margin-bottom: 25px;
+  }
+}

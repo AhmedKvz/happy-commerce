@@ -2,7 +2,7 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useState, useRef } from "react";
 import Images from "../img/images";
-
+import "../pages/Single.css";
 function Single({ cart, setCart }) {
   const qunt = useRef(0);
   let params = useParams();

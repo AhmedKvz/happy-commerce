@@ -159,8 +159,13 @@ responsive
   .products .col-md-4 {
     margin-bottom: 25px;
   }
-}
 
-ul {
-  display: flex;
+  .carousel-item h2 {
+    line-height: 1;
+    font-size: 0.7em;
+  }
+
+  ul {
+    display: flex;
+  }
 }
