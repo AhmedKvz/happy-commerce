@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../img/logo.png";
-function Navbar() {
+function Navbar({ cart }) {
+  console.log(cart, "navbar");
   return (
     <nav className="navbar navbar-light navbar-expand-lg bg-light">
       <div className="container">
@@ -39,7 +40,7 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link className="nav-link active" aria-current="page" to="/Cart">
-                Cart
+                Cart ({cart.length})
               </Link>
             </li>
           </ul>

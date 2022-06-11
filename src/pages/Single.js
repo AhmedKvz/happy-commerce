@@ -1,11 +1,27 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Images from "../img/images";
 
-function Single() {
-  const [items, setItems] = useState({ ...Images });
+function Single({ cart, setCart }) {
+  const qunt = useRef(0);
   let params = useParams();
+  const [items, setItems] = useState({ ...Images });
+  console.log(setCart, "setCart");
+
+  const addToCart = () => {
+    let newCartItem = {
+      id: items[params?.id].id,
+      txt: items[params?.id].txt,
+      price: items[params?.id].price,
+      quant: qunt.current.value,
+      src: items[params?.id].src,
+    };
+    console.log(newCartItem);
+    setCart((prev) => {
+      return [...prev, newCartItem];
+    });
+  };
 
   let options = [];
   for (let i = 0; i < items[params?.id].quant; i++) {
@@ -34,6 +50,7 @@ function Single() {
                 <h5>{items[params?.id].price}</h5>
               </div>
               <select
+                ref={qunt}
                 className="form-select"
                 aria-label="Default select example"
               >
@@ -49,7 +66,7 @@ function Single() {
                 Tenetur ut aliquid dolore a nobis sapiente sunt minus eum
                 perspiciatis suscipit?
               </p>
-              <Link className="button" to="#">
+              <Link onClick={addToCart} className="button" to="#">
                 Add to cart
               </Link>
             </div>

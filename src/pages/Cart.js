@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 function Cart() {
   return (
     <>
-      <section class="single py-5">
-        <article class="container">
-          <div class="row align-items-center">
-            <div class="col-md-10 mx-auto">
-              <table class="table table-striped table-hover shadow-lg">
+      <section className="single py-5">
+        <article className="container">
+          <div className="row align-items-center">
+            <div className="col-md-10 mx-auto">
+              <table className="table table-striped table-hover shadow-lg">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
@@ -33,7 +33,7 @@ function Cart() {
                   </tr>
                 </tbody>
               </table>
-              <Link to="#" class="button mt-4">
+              <Link to="#" className="button mt-4">
                 Payment process
               </Link>
             </div>
