@@ -26,7 +26,7 @@ function App() {
             <Route path=":id" element={<Single />} />
           </Route>
           <Route path="/admin" element={<Admin />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
           <Route path="/*" element={<NotFound />} />
         </Routes>
         <Footer />

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function Cart() {
+function Cart({ cart }) {
   return (
     <>
       <section className="single py-5">
@@ -16,21 +16,15 @@ function Cart() {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <th scope="row">1</th>
-                    <td>Orange t-shirt</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">2</th>
-                    <td>Traveller bag</td>
-                    <td>1</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">3</th>
-                    <td>Sunglasss</td>
-                    <td>1</td>
-                  </tr>
+                  {cart.map((cart, index) => {
+                    return (
+                      <tr key={index}>
+                        <th scope="row">{index + 1}</th>
+                        <td>{cart.txt}</td>
+                        <td>{cart.quant}</td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
               <Link to="#" className="button mt-4">
