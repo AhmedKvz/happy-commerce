@@ -117,7 +117,7 @@ function Home() {
                     <div className="card-body">
                       <div className="price d-flex justify-content-between">
                         <h5 className="card-title">{image.txt}</h5>
-                        <h5>{image.price}</h5>
+                        <h5>{image.price}$</h5>
                       </div>
                       <p className="card-text">
                         Some quick example text to build on the card title and

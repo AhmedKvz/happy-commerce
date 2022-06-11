@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Logo from "../img/logo.png";
+
 function Navbar({ cart }) {
-  console.log(cart, "navbar");
   return (
     <nav className="navbar navbar-light navbar-expand-lg bg-light">
       <div className="container">
