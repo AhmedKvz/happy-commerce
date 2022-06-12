@@ -2,7 +2,6 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useState, useRef } from "react";
 import Images from "../img/images";
-import "../pages/Single.css";
 function Single({ cart, setCart }) {
   const qunt = useRef(0);
   let params = useParams();
@@ -47,7 +46,7 @@ function Single({ cart, setCart }) {
             <div className="col-md-6">
               <div className="price d-flex justify-content-between">
                 <h5>{items[params?.id].txt}</h5>
-                <h5>{items[params?.id].price}</h5>
+                <h5>${items[params?.id].price}</h5>
               </div>
               <select
                 ref={qunt}

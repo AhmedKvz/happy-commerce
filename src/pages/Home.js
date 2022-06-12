@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Slide1 from "../img/slide_1.jpg";
 import Slide2 from "../img/slide_2.jpg";
 import images from "../img/images.js";
-import "./Home.css";
 function Home() {
   return (
     <>
